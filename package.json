@@ -6,10 +6,13 @@
   "scripts": {
     "build": "webpack",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=0145a18b17a2"
   },
   "keywords": [],
-  "author": "isaev_md",
+  "author": {
+    "name": "isaev_md"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -41,5 +44,7 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "readme": "ERROR: No README data found!",
+  "_id": "isaev-ui-kit@1.0.0"
 }
