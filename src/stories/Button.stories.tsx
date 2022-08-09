@@ -19,5 +19,5 @@ Small.args = {
 export const Large = Template.bind({});
 Large.args = {
   variant: "large",
-  children: "ПРОВЕРКА ПОНАЯ",
+  children: "всё нормально без билда на слиенте",
 };
