@@ -1,4 +1,4 @@
-import React, {FC, ReactElement, ReactNode} from "react";
+import React, {FC, ReactNode} from "react";
 import "./styles.css";
 
 export interface InputProps {
@@ -20,8 +20,8 @@ export const Input: FC<InputProps> = ({
   }
 
   return (
-    <input className={classes.join(" ")} style={{color}} {...props}>
+    <div className={classes.join(" ")} style={{color}} {...props}>
       {children}
-    </input>
+    </div>
   );
 };
