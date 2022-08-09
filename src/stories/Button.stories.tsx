@@ -19,5 +19,5 @@ Small.args = {
 export const Large = Template.bind({});
 Large.args = {
   variant: "large",
-  children: "My text",
+  children: "ПРОВЕРКА ПОНАЯ",
 };
