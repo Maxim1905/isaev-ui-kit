@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Small = Template.bind({});
 Small.args = {
   variant: "small",
-  children: "My text",
+  children: "NEW TEEXT",
 };
 
 export const Large = Template.bind({});
