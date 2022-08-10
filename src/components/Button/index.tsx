@@ -2,25 +2,23 @@ import React, {FC, ReactElement, ReactNode} from "react";
 import "./styles.css";
 
 export interface ButtonProps {
-  color: string;
+  disabled?: boolean;
+  className?: string;
   children: ReactNode;
-  variant?: "small" | "large";
+  variant?: "contained" | "outlined" | "text";
+  onClick?: () => void;
 }
 
 export const Button: FC<ButtonProps> = ({
+  disabled = false,
   children,
-  color,
-  variant = "small",
+  variant = "contained",
+  className,
+  onClick,
   ...props
 }: ButtonProps) => {
-  const classes = ["root"];
-
-  if (variant === "large") {
-    classes.push("large");
-  }
-
   return (
-    <button className={classes.join(" ")} style={{color}} {...props}>
+    <button className="root" onClick={onClick && onClick} {...props}>
       {children}
     </button>
   );
