@@ -18,7 +18,12 @@ export const Button: FC<ButtonProps> = ({
   ...props
 }: ButtonProps) => {
   return (
-    <button className="root" onClick={onClick && onClick} {...props}>
+    <button
+      className="root"
+      onClick={onClick && onClick}
+      disabled={disabled}
+      {...props}
+    >
       {children}
     </button>
   );
