@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
-import { Button } from "../src/components/Button";
+import Button from "../src/components/Button";
 
 describe("Button", () => {
   test("Кнопка кликабельна", () => {
@@ -17,9 +17,11 @@ describe("Button", () => {
   test("Кнопка не кликабельна", () => {
     const onClickMock = jest.fn();
     render(
-      <Button onClick={onClickMock} disabled>
+      <Button
+        onClick={onClickMock}
+        disabled>
         My button
-      </Button>
+      </Button>,
     );
 
     const button = screen.getByText("My button");

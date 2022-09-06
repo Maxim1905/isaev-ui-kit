@@ -9,19 +9,23 @@ export interface ButtonProps {
   onClick?: (event?: MouseEvent) => void;
 }
 
-export const Button: FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
   disabled = false,
   children,
   variant = "contained",
   className,
   onClick,
   ...props
-}: ButtonProps) => (
-  <button
-    className={`root ${className}`}
-    onClick={onClick && onClick}
-    disabled={disabled}
-    {...props}>
-    {children}
-  </button>
-);
+}: ButtonProps) => {
+  return (
+    <button
+      className={`root ${className}`}
+      onClick={onClick && onClick}
+      disabled={disabled}
+      {...props}>
+      {children}
+    </button>
+  );
+};
+
+export default Button;
