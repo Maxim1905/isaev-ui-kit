@@ -10,7 +10,8 @@
     "chromatic": "npx chromatic --project-token=0145a18b17a2",
     "test": "jest",
     "pub": "npm:build && npm version patch && npm publish",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettier": "prettier --write src/**/*.tsx"
   },
   "keywords": [],
   "author": {
@@ -57,5 +58,8 @@
     "dist"
   ],
   "readme": "ERROR: No README data found!",
-  "_id": "isaev-ui-kit@1.0.0"
+  "_id": "isaev-ui-kit@1.0.0",
+  "dependencies": {
+    "prettier": "^2.7.1"
+  }
 }

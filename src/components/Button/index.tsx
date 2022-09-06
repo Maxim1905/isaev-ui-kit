@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode, MouseEvent } from "react";
 import "./styles.css";
 
 export interface ButtonProps {
@@ -6,7 +6,7 @@ export interface ButtonProps {
   className?: string;
   children: ReactNode;
   variant?: "contained" | "outlined" | "text";
-  onClick?: () => void;
+  onClick?: (event?: MouseEvent) => void;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -16,15 +16,12 @@ export const Button: FC<ButtonProps> = ({
   className,
   onClick,
   ...props
-}: ButtonProps) => {
-  return (
-    <button
-      className="root"
-      onClick={onClick && onClick}
-      disabled={disabled}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-};
+}: ButtonProps) => (
+  <button
+    className={`root ${className}`}
+    onClick={onClick && onClick}
+    disabled={disabled}
+    {...props}>
+    {children}
+  </button>
+);
