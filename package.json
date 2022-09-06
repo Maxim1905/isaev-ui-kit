@@ -9,7 +9,7 @@
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=0145a18b17a2",
     "test": "jest",
-    "send-to-publish": "npm:build && npm version patch && npm publish",
+    "publish": "npm:build && npm version patch && npm publish",
     "prettier": "prettier --write src/**/*.tsx"
   },
   "keywords": [],
